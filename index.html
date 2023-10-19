@@ -22,7 +22,6 @@
         <p>This visualization provides insights into influenza cases by region and their impact on the population.</p>
 
         <!-- Visualization Containers -->
-        <div class="visualization" id="vis2"></div>
         <div class="visualization" id="vis1"></div>
     </div>
 
@@ -31,8 +30,7 @@
         const specVis1 = "choropleth_malaria.vg.json";
         const specVis2 = "scatterplot_interactive.vg.json";
 
-        vegaEmbed('#vis1', specVis1, { "actions": false });
-        vegaEmbed('#vis2', specVis2, { "actions": false })
+        vegaEmbed('#vis1', specVis1, { "actions": false })
             .then(result => {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
