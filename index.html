@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega Visualizations</title>
+
+    <!-- Import Vega & Vega-Lite libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Title and Description -->
+        <h1>Influenza Visualization</h1>
+        <p>This visualization provides insights into influenza cases by region and their impact on the population.</p>
+
+        <!-- Visualization Containers -->
+        <div class="visualization" id="vis2"></div>
+        <div class="visualization" id="vis1"></div>
+    </div>
+
+    <!-- Visualization Scripts -->
+    <script>
+        const specVis1 = "choropleth_malaria.vg.json";
+        const specVis2 = "scatterplot_interactive.vg.json";
+
+        vegaEmbed('#vis1', specVis1, { "actions": false });
+        vegaEmbed('#vis2', specVis2, { "actions": false })
+            .then(result => {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            })
+            .catch(console.error);
+    </script>
+</body>
+
+</html>
